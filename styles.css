@@ -48,3 +48,13 @@ img:hover {
     margin-bottom: 10px;
 
 }
+/* Fade-in ja fade-out efektit */
+img.fade-out, #caption.fade-out {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+img.fade-in, #caption.fade-in {
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+}
