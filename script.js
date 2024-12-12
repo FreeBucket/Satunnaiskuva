@@ -57,14 +57,14 @@ function updateImageAndCaption(images) {
 // Käynnistys ja tapahtuman käsittely
 async function init() {
     const images = await fetchImages();
-
     if (images.length > 0) {
+        updateImageAndCaption(images); // Näytetään kuva ja kuvateksti sivun latauksen yhteydessä
         document.querySelector("button").addEventListener("click", () => {
             updateImageAndCaption(images);
-        });
+        }); 
     } else {
         console.error("Kuvia ei voitu hakea. Tarkista API-avain ja internet-yhteys.");
     }
 }
 
-init();
+window.onload = init();
