@@ -32,7 +32,7 @@ button:active {
 
 img {
     max-width: 100%;
-    height: auto;
+    max-height: auto;
     border: 5px solid #ddd;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -57,4 +57,17 @@ img.fade-out, #caption.fade-out {
 img.fade-in, #caption.fade-in {
     opacity: 1;
     transition: opacity 0.5s ease-in-out;
+}
+
+.credit {
+    margin-top: 10px;
+    font-size: 0.8em;
+    color: grey;
+}
+
+.kuva {
+    grid-row: 1/2;
+}
+.credit {
+    grid-row: 2/2;
 }
