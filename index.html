@@ -7,11 +7,20 @@
     <title>Pixabay Satunnaiskuvat</title>
 </head>
 <body>
-    <div>
-        <button>Vaihda kuva</button>
-        <br><br>
-        <img src="" alt="Satunnainen kuva" width="500">
-        <p id="caption">Tässä näkyy kuvateksti.</p>
+    <div class="grid-container">       
+        <div class="kuva">
+            <button>Vaihda kuva</button>
+            <br>
+            <h3 id="caption">Tässä näkyy kuvateksti.</h3>
+            <br>
+            <div id="info"></div>
+            <br>
+            <img src="" alt="Satunnainen kuva" width="500" height="300px">
+            <br>
+        </div>
+        <div class="credit">
+            <h2>Images from <a href="https://pixabay.com/" target="_blank">Pixabay</a></h2>
+        </div>
     </div>
     <script src="script.js"></script>
 </body>
