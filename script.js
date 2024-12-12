@@ -1,4 +1,3 @@
-// Pixabay API:n tiedot
 const API_KEY = "47428494-7b3b5210e0bced2a50ebc2ae0"; // Korvaa omalla API-avaimellasi
 const API_URL = `https://pixabay.com/api/?key=${API_KEY}&q=nature&image_type=photo&per_page=10`;
 
@@ -57,14 +56,16 @@ function updateImageAndCaption(images) {
 // Käynnistys ja tapahtuman käsittely
 async function init() {
     const images = await fetchImages();
+
     if (images.length > 0) {
         updateImageAndCaption(images); // Näytetään kuva ja kuvateksti sivun latauksen yhteydessä
         document.querySelector("button").addEventListener("click", () => {
             updateImageAndCaption(images);
-        }); 
+        });
     } else {
         console.error("Kuvia ei voitu hakea. Tarkista API-avain ja internet-yhteys.");
     }
 }
 
-window.onload = init();
+// Käynnistetään init-funktio, kun sivu on ladattu
+window.onload = init;
